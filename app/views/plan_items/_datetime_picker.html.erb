@@ -1,0 +1,19 @@
+<div class = 'row'>
+  <div class = 'col-12 col-md-7'>
+    <div class='input-group'>
+      <%= f.text_field "#{attr_name}_date_part", class: 'form-control date-picker', required: true %>
+      <div class='input-group-append'>
+        <span class='input-group-text'><i class='fa fa-calendar'></i></span>
+      </div>
+    </div>
+  </div>
+  <div class = 'col-12 col-md-5'>
+    <div class = 'd-block d-md-none' style = 'margin-top: 0.5rem'></div>
+    <div class = 'input-group'>
+      <%= f.text_field "#{attr_name}_time_part", class: 'form-control time-picker', required: true %>
+      <div class = 'input-group-append'>
+        <span class = 'input-group-text'><i class = 'fa fa-clock'></i></span>
+      </div>
+    </div>
+  </div>
+</div>

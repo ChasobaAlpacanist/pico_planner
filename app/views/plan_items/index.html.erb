@@ -1,0 +1,20 @@
+<%= render 'index_nav' %>
+
+<% @plan_items.each do |item| %>
+  <%= render 'delete_confirmation', item: item %>
+<% end %>
+
+<div class = 'container-fluid plan-items'>
+  <% @plan_items.each do |item| %>
+  <%= render 'index_row', item: item %>
+  <% end %>
+</div>
+<% if @continued_plan_items.present? %>
+  <hr>
+  <div class = 'container-fluid plan-items'>
+    <% @continued_plan_items.each do |item| %>
+      <%= render 'delete_confirmation', item: item %>
+      <%= render 'index_row', item: item %>
+    <% end %>
+  </div>
+<% end %>

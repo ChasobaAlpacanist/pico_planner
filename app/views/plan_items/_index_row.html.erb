@@ -1,0 +1,23 @@
+<div class = 'row'>
+  <div class = 'col-8 col-md-4'>
+    <span class = 'plan-item-name'><%= link_to item.name, item %></span>
+  </div>
+  <div class = 'col-4 d-block d-lg-none text-right toolbar'>
+    <%= render 'xs_toolbar', item: item %>
+  </div>
+  <div class = 'col-12 col-md-5'>
+    <span class = 'plsn-item-description'>
+      <% item.description.split("\n").each do |line| %>
+        <%= line %><br>
+      <% end %>
+    </span>
+  </div>
+  <div class = 'col-md-3 d-none d-lg-block text-right toolbar'>
+    <%= render 'md_toolbar', item: item %>
+  </div>
+  <div class = 'col-12'>
+    <span class='plan-item-duration'>
+      <%= format_duration(item) %>
+    </span>
+  </div>
+</div>
